@@ -35,4 +35,4 @@ const PostPage = ({ id }: { id: number }) => {
   );
 };
 
-export default TodoPage;
+export default PostPage;

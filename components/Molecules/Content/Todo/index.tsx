@@ -9,8 +9,8 @@ const TodoPageTile = ({ todo, handleDelete, handleUpdate }: ITodoPageTile) => {
       <p><strong>Task:</strong> {todo.todo}</p>
       <p><strong>Completed:</strong> {completed ? 'Yes' : 'No'}</p>
       <div className="mt-6 space-x-4">
-        <Button onClick={() => handleUpdate(id)} className="bg-blue-500 text-white px-4 py-2 rounded">Update</Button>
-        <Button onClick={() => handleDelete(id)} className="bg-red-500 text-white px-4 py-2 rounded">Delete</Button>
+        <Button onClick={handleUpdate} className="bg-blue-500 text-white px-4 py-2 rounded">Update</Button>
+        <Button onClick={handleDelete} className="bg-red-500 text-white px-4 py-2 rounded">Delete</Button>
       </div>
     </div>
   )
