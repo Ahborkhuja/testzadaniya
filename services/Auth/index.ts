@@ -2,11 +2,9 @@ import { login } from "./login";
 
 export const endpoint = "auth";
 
-
-
-const Users = {
+const User = {
   login,  
 }
 
-export { Users }
+export { User }
 

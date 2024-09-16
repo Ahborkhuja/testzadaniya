@@ -1,4 +1,14 @@
-export { Product, Pagination, User, Todo, Post };
+export {
+  Product,
+  Pagination,
+  User,
+  Todo,
+  Post,
+  LoginSuccessResponse,
+  CredentialsInterface
+};
+
+export type LoginResponse = LoginFailureResponse | LoginSuccessResponse;
 
 interface Review {
   rating: number;
@@ -33,12 +43,15 @@ interface User {
   id: number;
   firstName: string;
   lastName: string;
-  username:string;
+  username: string;
   password: string
   age: number;
   gender: string;
   email: string;
   phone: string;
+  token: string;
+  accessToken: string;
+  refreshToken: string;
   image: string;
 }
 
@@ -70,4 +83,25 @@ interface Pagination<T> {
   total: number;
   skip: number;
   limit: number;
+}
+
+interface LoginFailureResponse {
+  message: string;
+}
+
+interface LoginSuccessResponse {
+  id: number;
+  username: string;
+  email: string;
+  firstName: string;
+  lastName: string;
+  gender: string;
+  image: string;
+  token: string; // JWT accessToken
+  refreshToken: string; // JWT refreshToken
+}
+
+interface CredentialsInterface {
+  username: string;
+  password: string;
 }

@@ -1,4 +1,4 @@
-import ProductPage from '../../../../components/Organisms/Layout/Content/Products/index';
+import ProductPage from '../../../../../components/Organisms/Layout/Content/Products/index';
 
 const Products = ({ params }: { params: { id: string } }) => {
   return (

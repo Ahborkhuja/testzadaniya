@@ -5,7 +5,7 @@ import { endpoint } from ".";
 
 export type NewUser = Pick<User, 'username' & 'password'>;
 
-export const login = async (post: NewUser): Promise<string | number> => {
+export const login = async (post: NewUser) => {
 
   const res = await fetch(`${process.env.API_URL}/${endpoint}/login`, {
     method: 'POST',
@@ -17,6 +17,6 @@ export const login = async (post: NewUser): Promise<string | number> => {
 
   revalidateTag(endpoint);
 
-  return res.json();
+  return res;
 }
 

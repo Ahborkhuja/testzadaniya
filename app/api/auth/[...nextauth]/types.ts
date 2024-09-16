@@ -1,19 +1,13 @@
 declare module "@auth/core/types" {
   interface User {
+    id: number;
     accessToken: string;
-    accessTokenUpdatedAt: string;
-    accessTokenExpiredAt: string;
     refreshToken: string;
-    userId: string;
-    active: 0 | 1 | 2;
   }
 
   interface JWT {
+    id: number;
     accessToken: string;
-    accessTokenUpdatedAt: string;
-    accessTokenExpiredAt: string;
     refreshToken: string;
-    userId: string;
-    active: 0 | 1 | 2;
   }
 }

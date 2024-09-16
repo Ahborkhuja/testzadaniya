@@ -1,6 +1,6 @@
 "use server"
 
-import PostsGrid from '../../../components/Organisms/Layout/Grid/Posts/index';
+import PostsGrid from '../../../../components/Organisms/Layout/Grid/Posts/index';
 
 const PostsPage = () => {
   return (
